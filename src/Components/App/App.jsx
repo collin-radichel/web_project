@@ -1,17 +1,19 @@
 // import { useSelector } from 'react-redux';
-import { HashRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
+import View1 from "../View1/View1";
 
 function App() {
   return (
     <div className="App">
-      <Router>
-        <Header />
-
+      <BrowserRouter>
         <Routes>
-          <Route path="/" exact></Route>
-        </Routes>
-      </Router>
+          <Route path="/" element={<Header />}/>
+
+          <Route path="/View1" element={<View1 />}/>
+
+        </Routes>        
+      </BrowserRouter>
     </div>
   );
 }
